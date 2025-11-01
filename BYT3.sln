@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BYT3", "BYT3\BYT3.csproj", "{012EBC53-2FCC-444A-A872-9AF7FD9FE99A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BYT3.Tests", "BYT3.Tests\BYT3.Tests.csproj", "{012EBC53-2FCC-444A-A872-9AF7FD9FE99A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BYT3.Classes", "BYT3.Classes\BYT3.Classes.csproj", "{32F6420A-58F3-434B-94A1-A0504FCE09FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{012EBC53-2FCC-444A-A872-9AF7FD9FE99A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{012EBC53-2FCC-444A-A872-9AF7FD9FE99A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{012EBC53-2FCC-444A-A872-9AF7FD9FE99A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F6420A-58F3-434B-94A1-A0504FCE09FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F6420A-58F3-434B-94A1-A0504FCE09FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F6420A-58F3-434B-94A1-A0504FCE09FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F6420A-58F3-434B-94A1-A0504FCE09FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
