@@ -5,13 +5,13 @@ namespace BYT3_Tests
     [TestFixture]
     public class CalculatorTests
     {
-        private ICalculator _add = new Calculator(1000, 5000, "+");
-        private ICalculator _sub = new Calculator(1000, 5000, "-");
-        private ICalculator _mul = new Calculator(100, 500, "*");
-        private ICalculator _div = new Calculator(100, 500, "/");
-        private ICalculator _divByZero = new Calculator(100, 0, "/");
-        private ICalculator _invalidArgument = new Calculator(100, 123, "123");
-        private ICalculator _boundaries = new Calculator(1e200, 1e200, "*");
+        private readonly ICalculator _add = new Calculator(1000, 5000, "+");
+        private readonly ICalculator _sub = new Calculator(1000, 5000, "-");
+        private readonly ICalculator _mul = new Calculator(100, 500, "*");
+        private readonly ICalculator _div = new Calculator(100, 500, "/");
+        private readonly ICalculator _divByZero = new Calculator(100, 0, "/");
+        private readonly ICalculator _invalidArgument = new Calculator(100, 123, "123");
+        private readonly ICalculator _boundaries = new Calculator(1e200, 1e200, "*");
 
         [Test]
         public void AdditionTest()
