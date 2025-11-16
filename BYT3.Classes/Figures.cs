@@ -9,23 +9,34 @@ namespace BYT3_Classes
 }
 
 
-
+/*
+ * All shape classes where modified to check for edge case scenario (one or more elements being <= 0)
+ */
 namespace BYT3_Classes
 {
-    public class Cube(double side) : IShape
+    public class Cube : IShape
     {
-        private readonly double side = side;
+        private readonly double _side;
 
+        public Cube(double side)
+        {
+            if (side <= 0)
+            {
+                throw new Exception("Cube side must be positive");
+            }
+            
+            _side = side;
+        }
+        
         public double CalculateArea()
         {
-            return 6 * Math.Pow(side, 2);
+            return 6 * Math.Pow(_side, 2);
         }
 
         public double CalculateVolume()
         {
-            return Math.Pow(side, 3);
+            return Math.Pow(_side, 3);
         }
-
     }
 }
 
@@ -33,14 +44,25 @@ namespace BYT3_Classes
 
 namespace BYT3_Classes
 {
-    public class Rectangle(double length, double width) : IShape
+    public class Rectangle : IShape
     {
-        private readonly double length = length;
-        private readonly double width = width;
+        private readonly double _length;
+        private readonly double _width;
+
+        public Rectangle(double length, double width)
+        {
+            if (length <= 0 || width <= 0)
+            {
+                throw new Exception("Either rectangle width or length must be positive");
+            }
+            
+            _length = length;
+            _width = width;
+        }
 
         public double CalculateArea()
         {
-            return length * width;
+            return _length * _width;
         }
 
         public double CalculateVolume()
@@ -56,19 +78,30 @@ namespace BYT3_Classes
 
 namespace BYT3_Classes
 {
-    public class Cylinder(double radius, double height) : IShape
+    public class Cylinder : IShape
     {
-        private readonly double radius = radius;
-        private readonly double height = height;
+        private readonly double _radius;
+        private readonly double _height;
+
+        public Cylinder(double radius, double height)
+        {
+            if (radius <= 0 || height <= 0)
+            {
+                throw new Exception("Either cylinder radius or height must be positive");
+            }
+            
+            _radius = radius;
+            _height = height;
+        }
 
         public double CalculateArea()
         {
-            return 2 * Math.PI * radius * (radius + height);
+            return 2 * Math.PI * _radius * (_radius + _height);
         }
 
         public double CalculateVolume()
         {
-            return Math.PI * Math.Pow(radius, 2) * height;
+            return Math.PI * Math.Pow(_radius, 2) * _height;
         }
 
     }
@@ -77,18 +110,28 @@ namespace BYT3_Classes
 
 namespace BYT3_Classes
 {
-    public class Sphere(double radius) : IShape
+    public class Sphere : IShape
     {
-        private readonly double radius = radius;
+        private readonly double _radius;
 
+        public Sphere(double radius)
+        {
+            if (radius <= 0)
+            {
+                throw new Exception("Sphere radius must be positive");
+            }
+            
+            _radius = radius;
+        }
+        
         public double CalculateArea()
         {
-            return 4 * Math.PI * Math.Pow(radius, 2);
+            return 4 * Math.PI * Math.Pow(_radius, 2);
         }
 
         public double CalculateVolume()
         {
-            return (4.0 / 3.0) * Math.PI * Math.Pow(radius, 3);
+            return (4.0 / 3.0) * Math.PI * Math.Pow(_radius, 3);
         }
     }
 }
